@@ -2,6 +2,8 @@ FROM ros:humble
 SHELL ["/bin/bash", "-c"]
 
 RUN git clone https://github.com/barinalex/ros2pkgs.git
+RUN apt-get update
+RUN apt-get -y install vim
 RUN source /opt/ros/humble/setup.bash && \
     cd ros2pkgs && \
     apt-get update --fix-missing && \
