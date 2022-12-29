@@ -9,6 +9,7 @@ RUN apt-get -y install ffmpeg libsm6 libxext6 libgl1
 RUN apt-get install -y --no-install-recommends \
     libopencv-dev \
     python3-opencv
+RUN apt install ros-humble-image-tools
 RUN source /opt/ros/humble/setup.bash && \
     cd ros2pkgs && \
     apt-get update --fix-missing && \
